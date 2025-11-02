@@ -2,6 +2,8 @@ import { Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+const LOGIN_URL = "http://localhost:5173/"
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
@@ -54,9 +56,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:opacity-100 transition-opacity">
+                <Link href={LOGIN_URL} className="hover:opacity-100 transition-opacity">
                   Inicia Sesión
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

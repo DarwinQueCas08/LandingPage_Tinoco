@@ -3,6 +3,9 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import Link from "next/link"
+
+const LOGIN_URL = "http://localhost:5173/"
 
 export default function ContactPage() {
   return (
@@ -102,13 +105,15 @@ export default function ContactPage() {
                 Inicia sesión para hacer tu consulta y ver el estado de ella en tiempo real. Nuestro equipo está
                 disponible para brindarte la mejor asesoría.
               </p>
-              <Button
-                size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground w-full sm:w-auto"
-              >
-                <Send className="mr-2 h-5 w-5" />
-                Inicia Sesión para Consultar
-              </Button>
+              <Link href={LOGIN_URL}>
+                <Button
+                  size="lg"
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground w-full sm:w-auto"
+                >
+                  <Send className="mr-2 h-5 w-5" />
+                  Inicia Sesión para Consultar
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

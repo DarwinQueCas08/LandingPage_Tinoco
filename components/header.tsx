@@ -6,6 +6,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
+const LOGIN_URL = "http://localhost:5173/"
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -36,9 +38,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium hidden sm:inline-flex">
-            Inicia Sesión
-          </Button>
+          <Link href={LOGIN_URL}>
+            <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium hidden sm:inline-flex">
+              Inicia Sesión
+            </Button>
+          </Link>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -80,9 +84,11 @@ export function Header() {
             >
               Contacto
             </Link>
-            <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium w-full sm:hidden">
-              Inicia Sesión
-            </Button>
+            <Link href={LOGIN_URL} className="w-full">
+              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium w-full sm:hidden">
+                Inicia Sesión
+              </Button>
+            </Link>
           </div>
         </nav>
       )}

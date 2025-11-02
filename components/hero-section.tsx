@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield, Users, Award } from "lucide-react"
 import Link from "next/link"
 
+const LOGIN_URL = "http://localhost:5173/"
+
 export function HeroSection() {
   return (
     <section
@@ -20,10 +22,12 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
-              Inicia Sesión para Consultar
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href={LOGIN_URL}>
+              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
+                Inicia Sesión para Consultar
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Link href="/servicios">
               <Button
                 size="lg"
