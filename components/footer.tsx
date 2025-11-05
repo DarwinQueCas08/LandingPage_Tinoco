@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-const LOGIN_URL = "http://localhost:5173/"
+const LOGIN_URL = "https://iridescent-klepon-af939e.netlify.app/"
 
 export function Footer() {
   return (
