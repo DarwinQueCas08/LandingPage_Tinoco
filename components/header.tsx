@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
-const LOGIN_URL = "http://localhost:5173/"
+const LOGIN_URL = "https://iridescent-klepon-af939e.netlify.app/"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
